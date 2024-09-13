@@ -6,8 +6,11 @@
 :root{
     --bg-color : #F5F7F8;
     --theme-color : #E72929;
-    --text-color :  #BBBBBB;
-
+    --text-color :  #7b7b7b;
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+    }
 }
 *{
     margin: 0;
@@ -18,10 +21,70 @@ body{
     height: 100vh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 
     background-color: var(--bg-color);
 
+}
+header{
+    width: 100vw;
+    background-color: white;
+}
+.upper-nav{
+    display: flex;
+
+    justify-content: space-between;
+    padding: 1rem;
+
+    background-color: white;
+}
+.right-upper-section>select{
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+
+}
+.nav-container{
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-around;
+}
+.nav-bar{
+    width: 35vw;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+
+    list-style: none;
+}
+.nav-li{
+    position: relative;
+}
+
+.nav-li::before{
+    content: '';
+
+    display: block;
+    width: 0%;
+    height: 1px;
+
+    position: absolute;
+    top: 100%;
+
+    transition: width 0.3s ease;
+
+    background-color: var(--theme-color);
+
+
+}
+.nav-li:hover::before{
+    width: 100%;
+}
+.nav-li>a:hover{
+    color: var(--theme-color);
 }
