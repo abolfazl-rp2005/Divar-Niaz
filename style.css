@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Vazir;
+    src: url(Resources/Vazir.ttf);
+}
+
+:root{
+    --bg-color : #F5F7F8;
+    --theme-color : #E72929;
+    --text-color :  #BBBBBB;
+
+}
+*{
+    margin: 0;
+    padding :0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--bg-color);
+
+}
